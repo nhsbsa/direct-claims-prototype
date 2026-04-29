@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Direct Claims - Home</title>
+    <link href="https://www.nhs.uk/nhsuk-frontend/assets/nhsuk-frontend.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@7.1.0/dist/nhsuk.min.css" rel="stylesheet">
+    <style>
+        .nhs-app-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        .nhs-app-sidebar {
+            width: 250px;
+            background-color: #f0f4f5;
+            border-right: 1px solid #d8dde0;
+            padding: 20px 0;
+        }
+        .nhs-app-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .nhs-app-header {
+            background-color: #005eb8;
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nhs-app-content {
+            flex: 1;
+            padding: 24px;
+            background-color: #f8f8f8;
+        }
+        .nhs-nav-item {
+            display: block;
+            padding: 12px 24px;
+            color: #005eb8;
+            text-decoration: none;
+            border-left: 4px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .nhs-nav-item:hover {
+            background-color: #e8f0f5;
+            text-decoration: none;
+            color: #005eb8;
+        }
+        .nhs-nav-item.active {
+            background-color: #0072ce;
+            color: white;
+            border-left-color: #ffeb3b;
+        }
+        .nhs-search-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nhs-search-row {
+            display: flex;
+            gap: 16px;
+            align-items: end;
+        }
+        .nhs-search-field {
+            flex: 1;
+        }
+        .nhs-table-container {
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nhs-table-header {
+            padding: 16px 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #d8dde0;
+            font-weight: 600;
+        }
+        .nhs-footer {
+            background-color: #f0f4f5;
+            padding: 24px;
+            border-top: 1px solid #d8dde0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nhs-footer-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nhs-footer-links a {
+            color: #005eb8;
+            text-decoration: none;
+        }
+        .nhs-footer-links a:hover {
+            text-decoration: underline;
+        }
+        .nhs-logo-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nhs-logo {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #005eb8;
+            font-size: 14px;
+        }
+        .nhs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .nhs-table th,
+        .nhs-table td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #d8dde0;
+        }
+        .nhs-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+            color: #005eb8;
+        }
+        .nhs-table tr:hover {
+            background-color: #f8f8f8;
+        }
+        .nhs-action-link {
+            color: #005eb8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nhs-action-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nhs-app-layout">
+        <!-- Sidebar Navigation -->
+        <nav class="nhs-app-sidebar">
+            <a href="#" class="nhs-nav-item active">Home</a>
+            <a href="#" class="nhs-nav-item">Trace</a>
+            <a href="#" class="nhs-nav-item">Claims</a>
+            <a href="#" class="nhs-nav-item">OVT Claims</a>
+            <a href="#" class="nhs-nav-item">Maintenance</a>
+            <a href="#" class="nhs-nav-item">Configuration</a>
+            <a href="#" class="nhs-nav-item">Manage OVT</a>
+            <a href="#" class="nhs-nav-item">Payment Batches</a>
+            <a href="#" class="nhs-nav-item">View Logs</a>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="nhs-app-main">
+            <!-- Header -->
+            <header class="nhs-app-header">
+                <div class="nhs-logo-header">
+                    <div class="nhs-logo">NHS</div>
+                    <div>
+                        <h1 style="margin: 0; font-size: 24px;">NHS Direct Claims</h1>
+                    </div>
+                </div>
+                <div>
+                    <span style="font-size: 18px;">Welcome back, [NAME]</span>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="nhs-app-content">
+                <h2 style="margin-bottom: 24px; color: #005eb8;">Recently viewed customers</h2>
+                
+                <!-- Search Form -->
+                <div class="nhs-search-form">
+                    <div class="nhs-search-row">
+                        <div class="nhs-search-field">
+                            <label for="start-date" class="nhsuk-label">Start date</label>
+                            <input type="date" id="start-date" class="nhsuk-input" />
+                        </div>
+                        <div class="nhs-search-field">
+                            <label for="end-date" class="nhsuk-label">End date</label>
+                            <input type="date" id="end-date" class="nhsuk-input" />
+                        </div>
+                        <div>
+                            <button type="button" class="nhsuk-button" data-module="nhsuk-button">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Table -->
+                <div class="nhs-table-container">
+                    <div class="nhs-table-header">
+                        Showing 1 of 1 results
+                    </div>
+                    <table class="nhs-table">
+                        <thead>
+                            <tr>
+                                <th>Med</th>
+                                <th>Full name</th>
+                                <th>Last viewed</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15082</td>
+                                <td>Ms Joan Doe</td>
+                                <td>25/02/2026 16:18:26</td>
+                                <td>
+                                    <a href="#" class="nhs-action-link">View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="nhs-footer">
+                <div class="nhs-footer-links">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 24px; height: 24px; background-color: #005eb8; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px;">NHS</div>
+                        <span>NHS</span>
+                    </div>
+                    <a href="#">Service Manual</a>
+                    <a href="#">Figma How To's</a>
+                </div>
+                <div style="color: #42556a; font-size: 14px;">
+                    Made with ❤️ by Mohammed Asad Hussain for the NHS Design Community V0.29
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+   <main class="nhsuk-main-wrapper" id="maincontent">
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-quarter hide-on-mobile">
+
+      <!-- Use "app-side-nav__item--current" class on <li> for selected state -->
+
+      <nav class="app-side-nav">
+        <ul class="nhsuk-list app-side-nav__list">
+            <li class="app-side-nav__item app-side-nav__item--current"><a class="app-side-nav__link" href="home">Home</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">Trace</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">Claims</a></li>
+             <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">OVT Claims</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">Maintenance</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">Configuration</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">Manage OVT</a></li>
+              <li class="app-side-nav__item"><a class="app-side-nav__link" href="home">View Logs</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="nhsuk-grid-column-three-quarters">
+      
+
+<h1>Welcome back, [NAME]</h1>
+
+<p>You last logged in on 25/04/2026, 11:15AM</p>
+
+<h3> Recently viewed customers</h3>
+
+<div class="nhsuk-grid-row">
+  
+  <div class="nhsuk-grid-column-one-third">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="first-name">
+        Start date
+      </label>
+      <input class="nhsuk-input" id="first-name" name="first-name" type="text">
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-one-third">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="last-name">
+        End date
+      </label>
+      <input class="nhsuk-input" id="last-name" name="last-name" type="text">
+    </div>
+  </div>
+
+</div>
+
+  <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Search customers
+</button>
+
+<table class="nhsuk-table-responsive" role="table">
+  <thead class="nhsuk-table__head" role="rowgroup">
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="col" class="nhsuk-table__header" role="columnheader">
+        Med
+      </th>
+      <th scope="col" class="nhsuk-table__header" role="columnheader">
+        Full name
+      </th>
+      <th scope="col" class="nhsuk-table__header" role="columnheader">
+        Last viewed
+      </th>
+      <th scope="col" class="nhsuk-table__header" role="columnheader">
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Med </span>15083
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Full name </span>Jonathan Smith
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Owner </span><span>25/02/2026, 11:47:26</span>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Actions </span><span><p><a href="overview">View customer</a></p>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+     
+
+
+
+
+     
+
+     </div>
+     </main>
+
+    {% endblock %}

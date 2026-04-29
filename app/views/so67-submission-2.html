@@ -1,0 +1,93 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+  <div class="nhsuk-width-container">
+  <a class="nhsuk-back-link" href="so67-submission-1">
+    Back
+  </a>
+
+   <main class="nhsuk-main-wrapper" id="maincontent">
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+     <span class="nhsuk-caption-xl">Request for reimbursement rates 2/3</span>
+      
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+          Personal Identification Numbers
+        </h1>
+
+        <form action="/so67-submission-3" method="post" novalidate>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-label--s" for="example">
+              Country
+            </label>
+            <input class="nhsuk-input" id="example" name="example" type="text">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-label--s" for="example1">
+              Personal Identification Number (PIN)
+            </label>
+            <input class="nhsuk-input" id="example1" name="example1" type="text">
+          </div>
+
+
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+</div>
+
+</main>
+{% endblock %}

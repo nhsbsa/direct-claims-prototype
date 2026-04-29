@@ -1,0 +1,161 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+  <div class="nhsuk-width-container">
+  <a class="nhsuk-back-link" href="#">
+    Back
+  </a>
+
+   <main class="nhsuk-main-wrapper" id="maincontent">
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <span class="nhsuk-caption-xl">Request for reimbursement rates 1/3</span>
+
+      
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+          Person identification
+        </h1>
+
+        <form action="/SO67-submission-2" method="post" novalidate>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-label--s" for="example">
+              Family name(s)
+            </label>
+            <input class="nhsuk-input" id="example" name="example" type="text">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-label--s" for="example1">
+              Forename(s)
+            </label>
+            <input class="nhsuk-input" id="example1" name="example1" type="text">
+          </div>
+
+          <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="appointment-date-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+       Date of birth
+    </legend>
+    <div class="nhsuk-hint" id="appointment-date-hint">
+      For example, 18 3 2026
+    </div>
+    <div class="nhsuk-date-input" id="appointment-date">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-day">
+            Day
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment-date-day" name="appointmentDate[day]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-month">
+            Month
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment-date-month" name="appointmentDate[month]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-year">
+            Year
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment-date-year" name="appointmentDate[year]" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+        Sex
+    </legend>
+    <div class="nhsuk-hint" id="example-hints-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="exampleHints" type="radio" value="email">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          Male
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="exampleHints" type="radio" value="phone">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          Female
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text-message">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Unknown
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+</div>
+
+</main>
+{% endblock %}

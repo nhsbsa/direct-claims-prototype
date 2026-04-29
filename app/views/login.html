@@ -34,13 +34,29 @@
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <h1 class="nhsuk-heading-xl">
-      Landing page
+     Log in to the Direct Claims Service
       </h1>
 
-      <p>This hub contains all of the journeys for Direct Claims.</strong>.</p>
-
+      <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="user-name">
+      Username
+    </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="user-name" name="userName" type="text">
+</div>
      
+<div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="pass-word">
+      Password
+    </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="pass-word" name="passWord" type="text">
+</div>
+</div>
 
     </div>
-  </div>
+    
+ 
+  <a class="nhsuk-button" href="dashboard.html">Log in</a>
+
+   </div>
+
 {% endblock %}
