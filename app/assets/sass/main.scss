@@ -1,8 +1,20 @@
+$nhsuk-main-wrapper-max-width: 1200px;
+
 // Import NHS.UK frontend library
 @import "nhsuk-frontend/dist/nhsuk";
 
 // Add your custom CSS/Sass styles below.
 
+/* Forces the NHS Frontend package SVG and Text to stay locked inline */
+.nhsuk-back-link__link {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.nhsuk-back-link__link .nhsuk-icon {
+  margin-top: 0 !important;
+  margin-right: 8px !important; /* Proper design system spacing spacing */
+}
 .app-side-nav__item--current {
     border-left: 4px solid #005eb8;
     margin-left: -12px;
@@ -17,3 +29,5 @@
 .app-side-nav__item--current .app-side-nav__link {
     font-weight: 600;
 }
+
+

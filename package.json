@@ -12,8 +12,6 @@
     "nhsuk-frontend": "^10.4.2",
     "nhsuk-prototype-kit": "^8.2.0"
   },
-  "devDependencies": {
-  },
   "engines": {
     "node": "^22.11.0 || ^24.11.0"
   }

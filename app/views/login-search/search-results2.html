@@ -1,0 +1,190 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+    <form action="person-dashboard.html" method="post" novalidate>
+
+          <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl ">
+          Find a person's record
+        </h1>
+      </div>
+      <div class="nhsuk-grid-column-one-third" style="text-align:right;">
+        <a href="add-personal-details.html" class="nhsuk-button nhsuk-button--secondary" id="createClaimButton" role="button" data-module="nhsuk-button">Create a new person record</a>
+      </div>
+    </div>
+            
+         
+
+          
+
+          <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              Search for a person
+            </h2>
+            <hr style="margin:0px 0px 24px 0px;" />
+            <form action="search/with-pagination#results" method="post">
+              <div class="nhsuk-hint" id="contact-hint">
+                Search for a person using the fields below.
+              </div>
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
+                      First name
+                    </label>
+                    <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
+                  </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-ref">
+                      Last name
+                    </label>
+                    <input class="nhsuk-input " id="claim-ref" name="claim-ref" type="text">
+                  </div>
+                </div>
+
+
+                <div class="nhsuk-grid-column-one-third">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-ref">
+                      Date of birth
+                    </label>
+                    <input class="nhsuk-input " id="claim-ref" name="claim-ref" type="text">
+                  </div>
+                </div>
+
+              </div>
+
+              <hr class="nhsuk-u-width-two-thirds" style="margin:10px 0px 10px 0px;">
+              <div class="nhsuk-hint" id="contact-hint" style="padding-top:10px;">
+                Or search using the persom's reference ID
+              </div>
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
+                      Reference ID
+                    </label>
+                    <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
+                  </div>
+                </div>
+                </div>
+              
+              <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Search
+                </button>
+                <p class="nhsuk-u-margin-bottom-0"><a href="#">Clear search</a></p>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of search inputs -->
+
+    <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <div style="background-color: white; padding: 20px; border: 1px solid #ddd;">
+                    <br>
+                        <h2 class="nhsuk-heading-s">Showing results for 
+                        <span class="nhsuk-tag nhsuk-tag--green" style="color: #354550; margin-left: 15px; margin-right: 15px">Barry White, 05/04/1951</span>
+                        </h2>
+                        <table id="sortable" class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table">
+                        <!-- TABLE START -->
+                        <thead class="nhsuk-table__head">
+                            <tr class="nhsuk-table__row">
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">First name</th>
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Last name</th>
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Last viewed</th>
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body nhsuk-body-">
+                            <tr class="nhsuk-table__row">
+                                <td class="nhsuk-table__cell">Barry</td>
+                                <td class="nhsuk-table__cell">White</td>
+                                <td class="nhsuk-table__cell">04/05/2026</td>
+                                <td class="nhsuk-table__cell">
+                                    <a href="person-dashboard.html">View<span class="nhsuk-u-visually-hidden">person record</span></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+                        </main>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    
+
+
+
+    {% endblock %}
