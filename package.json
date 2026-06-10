@@ -9,6 +9,8 @@
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
   "dependencies": {
+    "@dwp/dwp-frontend": "^4.1.0",
+    "@ministryofjustice/frontend": "^9.0.0",
     "nhsuk-frontend": "^10.4.2",
     "nhsuk-prototype-kit": "^8.2.0"
   },

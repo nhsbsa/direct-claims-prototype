@@ -1,0 +1,116 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "Customer Nationality" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+<a class="nhsuk-back-link" href="search-person.html">
+  Back
+</a>
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+    <h1 class="nhsuk-heading-xl">
+           What is the customer’s nationality?
+        </h1>
+
+        <form action="treatment-country.html" method="post" novalidate>
+
+            <p>Non-UK or Irish nationals must provide evidence of their right to reside in the UK. This might be a share code or Indefinite Leave to Remain documentation.</p>
+
+            <p>If the treatment was in Switzerland, and the customer has selected 'Norwegian, Icelandic, or Liechtenstein national' or 'Other nationality', they must be a family member of someone covered under the UK-Swiss convention. They must provide evidence of this relationship.</p>
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+    
+    <div class="nhsuk-hint" id="example-hints-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="exampleHints" type="radio" value="email">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          UK/Irish national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="exampleHints" type="radio" value="phone">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          EU national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Swiss national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Dual national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Norwegian, Icelandic, or Liechtenstein national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Other nationality
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+    
+
+<button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+</form>
+
+{% endblock %}

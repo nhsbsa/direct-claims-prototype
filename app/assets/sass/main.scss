@@ -31,3 +31,116 @@ $nhsuk-main-wrapper-max-width: 1200px;
 }
 
 
+
+/* Container adjustments */
+.nhsapp-timeline {
+  position: relative;
+  padding-left: 32px;
+  margin: 24px 0;
+  font-family: "Frutiger W01", Arial, sans-serif;
+}
+
+/* The vertical thread line */
+.nhsapp-timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 4px;
+  background-color: #b1b4b6; /* NHS Mid-Grey Token */
+}
+
+.nhsapp-timeline__item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.nhsapp-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Rounded node bullet logic */
+.nhsapp-timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -32px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #b1b4b6; /* Default upcoming item state */
+  z-index: 1;
+}
+
+/* Typography elements */
+.nhsapp-timeline__title {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.35;
+  font-weight: 700;
+  color: #212b32; /* NHS Primary Dark Grey Text */
+  margin: 0 0 6px 0;
+}
+
+/* Past/Completed State Modifier */
+.nhsapp-timeline__item--past::before {
+  background-color: #005ea5; /* Official NHS Blue Token */
+  border-color: #005ea5;
+}
+
+.nhsapp-timeline__item--past .nhsapp-timeline__title {
+  color: #005ea5;
+}
+
+.nhsbsa-timeline { 
+margin-bottom: 20px; 
+overflow: hidden; 
+position: relative 
+} 
+
+.nhsbsa-timeline:before { 
+background-color: #005eb8; 
+content: ""; 
+ height: 100%; 
+left: 0; 
+position: absolute; 
+top: 10px; 
+width: 5px 
+} 
+
+.nhsbsa-timeline--full { 
+margin-bottom: 0 
+ } 
+
+.nhsbsa-timeline--full:before { 
+height: calc(100% - 75px) 
+} 
+
+.nhsbsa-timeline__item { 
+padding-bottom: 30px; 
+padding-left: 20px; 
+ position: relative 
+} 
+
+.nhsbsa-timeline__item:before { 
+background-color: #1d70b8; 
+content: ""; 
+ height: 5px; 
+left: 0; 
+position: absolute; 
+top: 10px; 
+width: 15px 
+} 
+
+.nhsbsa-timeline__title { 
+font-family: "GDS Transport", arial, sans-serif; 
+-webkit-font-smoothing: antialiased; 
+-moz-osx-font-smoothing: grayscale; 
+ font-weight: 700; 
+font-size: 1rem; 
+line-height: 1.25; 
+display: inline 
+} 
+
+ 

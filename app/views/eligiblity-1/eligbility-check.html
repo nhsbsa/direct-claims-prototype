@@ -1,0 +1,282 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+ <a href="search-person.html" class="govuk-back-link">Back</a>
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+    <form action="request-more-information.html" method="post" novalidate>
+
+  
+    <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-xl">
+            Eligbility checks
+        </h1>
+
+        <p>Review the claim form and evidence to check whether the claim can be accepted.</p>
+
+        <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        When to reject the claim form
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Reject the claim form immediately if:</p>
+      <ul>
+        <li>the treatment was not in an EU country, Iceland, Liechtenstein, Norway, or Switzerland</li>
+        <li>the treatment was on a cruise ship</li>
+        <li>the customer is claiming for treatment in their country of residence within the dates of their registered S1</li>
+      </ul>
+
+      <p>If you've already contacted the customer for more information, you can reject the claim form if:</p>
+
+      <ul>
+        <li>the customer is living abroad and does not have a valid S1</li>
+        <li>the customer is studying abroad and cannot provide evidence of study</li>
+        <li>the treatment was pre-planned</li>
+        <li>the treatment was not medically necessary</li>
+        <li>the customer has not provided original documents or a good reason for sending copies</li>
+        <li>the customer has not paid any of their treatment costs</li>
+        <li>the evidence shows that the UK is not responsible</li>
+      </ul>
+    </div>
+  </details>
+
+ </div>
+
+        <h1 class="nhsuk-heading-m">
+            When to request more information
+        </h1>
+
+        <p>Review the claim form and evidence to check whether the claim can be accepted.</p>
+
+        <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+       Part 1 - Patient's details
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+
+      <ul>
+        <li>any necessary information is missing, such as name or date of birth</li>
+        <li>the customer is living abroad and does not appear to have a registered S1</li>
+      </ul>
+
+      <p>You do not need to request the customer's National Insurance number or NHS number.</p>
+
+    </div>
+  </details>
+
+  <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+       Part 2 - Nationality
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+
+      <ul>
+        <li>any necessary information is missing, such as nationality</li>
+        <li>nationality evidence is missing, if required</li>
+        <li>evidence of relationship is missing, if required</li>
+      </ul>
+
+    </div>
+  </details>
+
+
+  <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+       Part 3 - Travel details
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+     
+      <ul>
+        <li>any necessary information is missing, such as travel dates</li>
+        <li>they're working abroad but have not provided an A1, or do not have an S1</li>
+        <li>they're studying abroad but have not provided evidence of study</li>
+      </ul>
+
+    </div>
+  </details>
+
+    <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+      Part 4 - Details of charges paid
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+     
+      <ul>
+        <li>any necessary information is missing, such as amount paid</li>     
+      </ul>
+
+    </div>
+  </details>
+
+     <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+     Part 5 - Treatment details
+
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+     
+      <ul>
+        <li>any necessary information is missing, such as treatment dates</li> 
+        <li>the treatment was in multiple countries - the customer will need to send separate claim forms for each country</li>    
+        <li>multiple separate treatments are listed - the customer will need to send separate claim forms for each treatment</li>    
+        <li>the treatment appears to be pre-planned</li>    
+        <li>the treatment appears to not be medically necessary</li>        
+      </ul>
+
+    </div>
+  </details>
+
+  <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+     Part 6 - Declaration
+
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+     
+      <ul>
+        <li>the signature or date is missing</li>        
+      </ul>
+
+    </div>
+  </details>
+
+  <div class="nhsuk-expander-group">
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+     Evidence
+
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p>Request more information if:</p>
+     
+      <ul>
+        <li>the customer has provided copied evidence</li> 
+        <li>any invoices are unpaid</li>  
+        <li>the evidence suggests the treatment was private, pre-planned, or not medically necessary/li>  
+      </ul>
+
+    </div>
+  </details>
+
+  </div>
+
+
+        <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      <h1 class="nhsuk-fieldset__heading">
+       What do you want to do next?
+      </h1>
+    </legend>
+    <div class="nhsuk-hint" id="example-hints-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="exampleHints" type="radio" value="email">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          Accept the claim
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="exampleHints" type="radio" value="phone">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          Reject the claim
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Request more information
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+        </div>
+
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+</form>
+
+        </main>
+
+        {% endblock %}
