@@ -50,15 +50,50 @@
   <main class="nhsuk-main-wrapper" id="maincontent">
 
     <h1 class="nhsuk-heading-xl">
-            What is the OHS reference number?
+            Does the customer have an OHS reference number?
         </h1>
 
-        <form action="add-child.html" method="post" novalidate>
+        <form action="add-ghic.html" method="post" novalidate>
 
-
-    <div class="nhsuk-form-group">
-  
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    <div class="nhsuk-hint" id="contact-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="nhsuk-form-group">
+         
+          
+         <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    Enter OHS reference number
+  </label>
   <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="inputWidth20" type="text">
+</div>
+
+    
+        </div>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="nhsuk-form-group">
+          
+          
+      </div>
+    </div>
+  </fieldset>
 </div>
 
 

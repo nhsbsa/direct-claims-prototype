@@ -45,30 +45,35 @@
   </p>
 </div>
 
-<a href="add-currency.html" class="govuk-back-link">Back</a>
+<a href="add-ghic.html" class="govuk-back-link">Back</a>
 
   <main class="nhsuk-main-wrapper" id="maincontent">
 
     <h1 class="nhsuk-heading-xl">
-            What is the refund amount?
+            Is the claim on behalf of someone else?
         </h1>
 
-        <form action="add-country-v2.html"post novalidate>
+        <form action="add-child.html" method="post" novalidate>
 
-
-    <div class="nhsuk-form-group">
-  
-<div class="govuk-form-group">
-  
 <div class="nhsuk-form-group">
-  <div class="nhsuk-input-wrapper">
-    <div class="nhsuk-input-wrapper__prefix" aria-hidden="true">£</div>
-    <input class="nhsuk-input nhsuk-input--width-5" id="cost-pounds" name="costPounds" type="text" spellcheck="false">
-  </div>
+  <fieldset class="nhsuk-fieldset">
+   
+    <div class="nhsuk-radios nhsuk-radios--inline" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline" name="exampleInline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="exampleInline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
-</div>
-</div>
-
 
   
 
@@ -77,6 +82,6 @@
           </button>
 </form>
 
-<a href="add-country.html">I cannot answer this question</a>
+<a href="add-child.html">I cannot answer this question</a>
 
 {% endblock %}
