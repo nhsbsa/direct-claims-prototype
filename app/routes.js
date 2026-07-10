@@ -38,5 +38,29 @@ router.post('/switzerland-refund', function (req, res) {
   }
 })
 
+router.post('/ohs-answer', function (req, res) {
+  // Get the answer from the form data
+  const ohsNumber = req.session.data['ohsNumber']
+
+  // Check the answer and branch the user
+  if (ohsNumber === 'yes') {
+    res.redirect('app/views/login-search/claim-creation/add-ghic.html')
+  } else {
+    res.redirect('app/views/login-search/claim-creation/dependant.html')
+  }
+})
+
+router.post('/dependant-answer', function (req, res) {
+  // Get the answer from the form data
+  const newDependant = req.session.data['newDependant']
+
+  // Check the answer and branch the user
+  if (newDependant === 'yes') {
+    res.redirect('app/views/login-search/claim-creation/add-child.html')
+  } else {
+    res.redirect('app/views/login-search/claim-creation/claim-check-answers.html')
+  }
+})
+
 module.exports = router
 
