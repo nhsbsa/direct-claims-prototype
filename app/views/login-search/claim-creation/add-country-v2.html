@@ -52,7 +52,7 @@
 
 
     <h1 class="nhsuk-heading-xl">
-            What is the primary EU country?
+            What is the country of treatment?
         </h1>
 
         <form action="/app/views/login-search/claim-creation/add-treatment-dates.html"post novalidate>
@@ -62,8 +62,9 @@
 
         <div class="govuk-form-group autocomplete-wrapper">
         
-          <h5>Select your primary EU country</h5>
-        </label>
+          <label class="nhsuk-label" for="sort-by">
+    Select country
+  </label>
         
         <select class="govuk-select" id="default" name="default">
           <option value="" disabled selected>Pick an option</option>
@@ -390,17 +391,10 @@
 
 </div>  
 
-    <h5>
-    Add further EU countries
-    </h5>
+    
 
     <div class="nhsuk-radios" data-module="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="nhsuk-label nhsuk-radios__label" for="contact">
-          Yes
-        </label>
-      </div>
+      
       <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact">
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
@@ -412,57 +406,18 @@
           </div>
 
 
-                <h3 class="nhsuk-u-margin-top-6">Additional information (optional)</h3>
+                
 
-                <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="select-1">
-                        Add further countries
-                </label>
-            <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
-            <datalist id="countries">
-                        <option value="Austria (AT)">Austria (AT)</option>
-                        <option value="Belgium (BE)">Belgium (BE)</option>
-                        <option value="Bulgaria (BG)" >Bulgaria (BG)</option>
-                        <option value="Croatia (HR)" >Croatia (HR)</option>
-                        <option value="Cyprus (CY)" >Cyprus (CY)</option>
-                        <option value="Czechia (CZ)" >Czechia (CZ)</option>
-                        <option value="Denmark (DK)" >Denmark (DK)</option>
-                        <option value="Estonia (EE)" >Estonia (EE)</option>
-                        <option value="Finland (FI)" >Finland (FI)</option>
-                        <option value="France (FR)" >France (FR)</option>
-                        <option value="Germany (DE)" >Germany (DE)</option>
-                        <option value="Greece (EL)" >Greece (EL)</option>
-                        <option value="Hungary (HU)" >Hungary (HU)</option>
-                        <option value="Iceland (IS)" >Iceland (IS)</option>
-                        <option value="Italy (IT)" >Italy (IT)</option>
-                        <option value="Latvia (LV)" >Latvia (LV)</option>
-                        <option value="Liechtenstein (LI)" >Liechtenstein (LI)</option>
-                        <option value="Lithuania (LT)" >Lithuania (LT)</option>
-                        <option value="Luxembourg (LU)" >Luxembourg (LU)</option>
-                        <option value="Malta (MT)" >Malta (MT)</option>
-                        <option value="Netherlands (NL)" >Netherlands (NL)</option>
-                        <option value="Norway (NO)" >Norway (NO)</option>
-                        <option value="Poland (PL)" >Poland (PL)</option>
-                        <option value="Portugal (PT)" >Portugal (PT)</option>
-                        <option value="Romania (RO)" >Romania (RO)</option>
-                        <option value="Slovakia (SK)" >Slovakia (SK)</option>
-                        <option value="Slovenia (SI)" >Slovenia (SI)</option>
-                        <option value="Spain (ES)" >Spain (ES)</option>
-                        <option value="Sweden (SE)" >Sweden (SE)</option>
-                        <option value="Switzerland (CH)" >Switzerland (CH)</option>
-                      </select>
-                </div>
+         
 
-          <br>
 
-<a href="add-country.html">Remove Country</a>
 
 
         </div>
       </div>
    
 
- <br><br>
+
   
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
