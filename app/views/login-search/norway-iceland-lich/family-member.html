@@ -45,65 +45,66 @@
   </p>
 </div>
 
-<a href="add-country.html" class="govuk-back-link">Back</a>
+<a href="search-results2.html" class="govuk-back-link">Back</a>
 
   <main class="nhsuk-main-wrapper" id="maincontent">
 
     <h1 class="nhsuk-heading-xl">
-            What date did the treatment start?
+            Is the customer a family member of any of the following?
         </h1>
 
-        <form action="add-treatment-dates-2.html" method="post" novalidate>
+        <form action="relationship.html" method="post" novalidate>
 
-
-    <div class="nhsuk-form-group">
-  
- 
-
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
-    <div class="nhsuk-hint" id="date-of-birth-hint">
-      For example, 15 3 2026
+            <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+    
+    <div class="nhsuk-hint" id="example-hints-hint">
+      Select 1 option
     </div>
-    <div class="nhsuk-date-input" id="date-of-birth">
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-day">
-            Day
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-of-birth-day" name="dateOfBirth[day]" type="text" autocomplete="bday-day" inputmode="numeric">
-        </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="exampleHints" type="radio" value="email">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          UK / Irish national
+        </label>
       </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-month">
-            Month
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-of-birth-month" name="dateOfBirth[month]" type="text" autocomplete="bday-month" inputmode="numeric">
-        </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="exampleHints" type="radio" value="phone">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          EU national
+        </label>
       </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-year">
-            Year
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="date-of-birth-year" name="dateOfBirth[year]" type="text" autocomplete="bday-year" inputmode="numeric">
-        </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Swiss national
+        </label>
       </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Stateless person or refugee
+        </label>
+      </div>
+        <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="exampleHints" type="radio" value="text">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          None of the above
+        </label>
+      </div>
+        
     </div>
-
+    
     
   </fieldset>
 </div>
 
 
-</div>
 
+   
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
             Continue
           </button>
 </form>
-
-<a href="add-ghic.html">I cannot answer this question</a>
 
 {% endblock %}

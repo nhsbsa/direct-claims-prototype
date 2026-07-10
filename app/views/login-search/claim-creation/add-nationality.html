@@ -49,58 +49,48 @@
 
   <main class="nhsuk-main-wrapper" id="maincontent">
 
+<form action="/switzerland-refund-1" method="post" novalidate>
+
 
     <h1 class="nhsuk-heading-xl">
             What is the nationality of the person?
         </h1>
-<br>
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hints-hint">
+    
+    <div class="nhsuk-hint" id="example-hints-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="refundNationality" type="radio" value="uk">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          British national
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="refundNationality" type="radio" value="irish">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          Irish national
+        </label>
+      </div>
+     
 
-                <h4 class="nhsuk-u-margin-top-4">Mandatory (first nationality)</h4>
-<br>
-
-
-      <div class="nhsuk-form-group">
-                            <fieldset class="nhsuk-fieldset">
-                             
-                                </legend>
-
-                                <div class="nhsuk-radios">
-
-                                    <div class="nhsuk-radios__item">
-                                        <input class="nhsuk-radios__input" id="age-1" name="age-bracket" type="radio"
-                                            value="0 to 19 years">
-                                        <label class="nhsuk-label nhsuk-radios__label" for="age-1">
-                                            British Citizen (UK)
-                                        </label>
-                                    </div>
-<br>
-                                    <div class="nhsuk-radios__item">
-                                        <input class="nhsuk-radios__input" id="age-2" name="age-bracket" type="radio"
-                                            value="20 to 64 years">
-                                        <label class="nhsuk-label nhsuk-radios__label" for="age-2">
-                                            Irish Citizen (Éire)
-                                        </label>
-                                    </div>
-
-                                    
-
-  <br><br>
-
-
-
-  
- </div>
-                </dl>
-
-
-
-    <div class="nhsuk-form-group">
-  
-      <div class="nhsuk-form-group">
-            <label class="nhsuk-label" id="entitlement-country-label" for="entitlement-country" class="form-label">
-              If not shown, what is the first nationality?
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="other" name="refundNationality" type="radio" value="other" data-aria-controls="conditional-other">
+        <label class="nhsuk-label nhsuk-radios__label" for="other">
+          Other nationality
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-other">
+        
+          
+          
+         <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    What is the customer's first nationality?
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
             <datalist id="countries">
                         <option value="Austria (AT)">Austria (AT)</option>
                         <option value="Belgium (BE)">Belgium (BE)</option>
@@ -133,88 +123,30 @@
                         <option value="Sweden (SE)" >Sweden (SE)</option>
                         <option value="Switzerland (CH)" >Switzerland (CH)</option>
                       </select>
-                </div>
+                
+        </div>
 
-        <form action="add-travel-dates.html"post novalidate>
+        </div>
+      
 
-<br>
+      
 
-
-
-<br>
-
-
-
-      <div class="nhsuk-form-group">
-                            <fieldset class="nhsuk-fieldset">
-                             
-                                </legend>
-
-                                <div class="nhsuk-radios">
-
-                                    <div class="nhsuk-radios__item">
-                                        <input class="nhsuk-radios__input" id="age-1" name="age-bracket" type="radio"
-                                            value="0 to 19 years">
-                                        <label class="nhsuk-label nhsuk-radios__label" for="age-1">
-                                            Other nationality
-                                        </label>
-                                    </div>
-
-<br>
-
-                <h4 class="nhsuk-u-margin-top-4">Optional (further nationalities)</h4>
-
-
-    <div class="nhsuk-form-group">
-  
-      <div class="nhsuk-form-group">
-            <label class="nhsuk-label" id="entitlement-country-label" for="entitlement-country" class="form-label">
-            If preferred, what is the second nationality?
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
-            <datalist id="countries">
-                        <option value="Austria (AT)">Austria (AT)</option>
-                        <option value="Belgium (BE)">Belgium (BE)</option>
-                        <option value="Bulgaria (BG)" >Bulgaria (BG)</option>
-                        <option value="Croatia (HR)" >Croatia (HR)</option>
-                        <option value="Cyprus (CY)" >Cyprus (CY)</option>
-                        <option value="Czechia (CZ)" >Czechia (CZ)</option>
-                        <option value="Denmark (DK)" >Denmark (DK)</option>
-                        <option value="Estonia (EE)" >Estonia (EE)</option>
-                        <option value="Finland (FI)" >Finland (FI)</option>
-                        <option value="France (FR)" >France (FR)</option>
-                        <option value="Germany (DE)" >Germany (DE)</option>
-                        <option value="Greece (EL)" >Greece (EL)</option>
-                        <option value="Hungary (HU)" >Hungary (HU)</option>
-                        <option value="Iceland (IS)" >Iceland (IS)</option>
-                        <option value="Ireland (IE)">Ireland (IE)</option>
-                        <option value="Italy (IT)" >Italy (IT)</option>
-                        <option value="Latvia (LV)" >Latvia (LV)</option>
-                        <option value="Liechtenstein (LI)" >Liechtenstein (LI)</option>
-                        <option value="Lithuania (LT)" >Lithuania (LT)</option>
-                        <option value="Luxembourg (LU)" >Luxembourg (LU)</option>
-                        <option value="Netherlands (NL)" >Netherlands (NL)</option>
-                        <option value="Norway (NO)" >Norway (NO)</option>
-                        <option value="Poland (PL)" >Poland (PL)</option>
-                        <option value="Portugal (PT)" >Portugal (PT)</option>
-                        <option value="Romania (RO)" >Romania (RO)</option>
-                        <option value="Slovakia (SK)" >Slovakia (SK)</option>
-                        <option value="Slovenia (SI)" >Slovenia (SI)</option>
-                        <option value="Spain (ES)" >Spain (ES)</option>
-                        <option value="Sweden (SE)" >Sweden (SE)</option>
-                        <option value="Switzerland (CH)" >Switzerland (CH)</option>
-                      </select>
-                </div>
-
-
-<br>
-    <div class="nhsuk-form-group">
-  
-      <div class="nhsuk-form-group">
-            <label class="nhsuk-label" id="entitlement-country-label" for="entitlement-country" class="form-label">
-              If preferred, what is the third nationality?
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
+      
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="dual" name="refundNationality" type="radio" value="dual" data-aria-controls="conditional-dual">
+        <label class="nhsuk-label nhsuk-radios__label" for="dual">
+          Dual nationality
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-dual">
+        
+          
+          
+         <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    What is the customer's first nationality?
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
             <datalist id="countries">
                         <option value="Austria (AT)">Austria (AT)</option>
                         <option value="Belgium (BE)">Belgium (BE)</option>
@@ -247,16 +179,78 @@
                         <option value="Sweden (SE)" >Sweden (SE)</option>
                         <option value="Switzerland (CH)" >Switzerland (CH)</option>
                       </select>
-                </div>
-<br>
-        <form action="add-travel-dates.html"post novalidate>
+                
+        </div>
+    
 
-
-    <div class="nhsuk-form-group">
-
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-20">
+    What is the customer's second nationality?
+  </label>
+ <input class="nhsuk-input nhsuk-input--width-20" list="countries" id="entitlement-country-drop" name="entitlement-country">
+            <datalist id="countries">
+                        <option value="Austria (AT)">Austria (AT)</option>
+                        <option value="Belgium (BE)">Belgium (BE)</option>
+                        <option value="Bulgaria (BG)" >Bulgaria (BG)</option>
+                        <option value="Croatia (HR)" >Croatia (HR)</option>
+                        <option value="Cyprus (CY)" >Cyprus (CY)</option>
+                        <option value="Czechia (CZ)" >Czechia (CZ)</option>
+                        <option value="Denmark (DK)" >Denmark (DK)</option>
+                        <option value="Estonia (EE)" >Estonia (EE)</option>
+                        <option value="Finland (FI)" >Finland (FI)</option>
+                        <option value="France (FR)" >France (FR)</option>
+                        <option value="Germany (DE)" >Germany (DE)</option>
+                        <option value="Greece (EL)" >Greece (EL)</option>
+                        <option value="Hungary (HU)" >Hungary (HU)</option>
+                        <option value="Iceland (IS)" >Iceland (IS)</option>
+                        <option value="Italy (IT)" >Italy (IT)</option>
+                        <option value="Latvia (LV)" >Latvia (LV)</option>
+                        <option value="Liechtenstein (LI)" >Liechtenstein (LI)</option>
+                        <option value="Lithuania (LT)" >Lithuania (LT)</option>
+                        <option value="Luxembourg (LU)" >Luxembourg (LU)</option>
+                        <option value="Malta (MT)" >Malta (MT)</option>
+                        <option value="Netherlands (NL)" >Netherlands (NL)</option>
+                        <option value="Norway (NO)" >Norway (NO)</option>
+                        <option value="Poland (PL)" >Poland (PL)</option>
+                        <option value="Portugal (PT)" >Portugal (PT)</option>
+                        <option value="Romania (RO)" >Romania (RO)</option>
+                        <option value="Slovakia (SK)" >Slovakia (SK)</option>
+                        <option value="Slovenia (SI)" >Slovenia (SI)</option>
+                        <option value="Spain (ES)" >Spain (ES)</option>
+                        <option value="Sweden (SE)" >Sweden (SE)</option>
+                        <option value="Switzerland (CH)" >Switzerland (CH)</option>
+                      </select>
+                
+        </div>
 </div>
 
-<br>  
+    
+        
+  
+
+      
+     
+    
+          
+    
+     
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-3" name="refundNationality" type="radio" value="stateless">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+          Stateless person or refugee
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+    
+
+        
+
+       
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
             Continue
