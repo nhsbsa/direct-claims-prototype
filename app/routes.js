@@ -5,22 +5,37 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// Run this code when a form submitted to '/magical-powers-answer'
-router.post('/cruise-ship-answer', function (req, res) {
+router.post('/switzerland-refund-1', function (req, res) {
+  const location = req.session.data['refundNationality']
 
- // Grab the submitted data using the 'name' attribute ('cruiseShip')
-  const cruiseShipAnswer = req.session.data['cruiseShip']
-
-  // Direct the user based on their answer
-  if (cruiseShipAnswer === 'Yes') {
-    res.redirect('/reject-claim') // Change to your "Yes" destination page
-  } else if (cruiseShipAnswer === 'No') {
-    res.redirect('/treatment-country')        // Change to your "No" destination page
+  if (location === 'uk') {
+    res.redirect('/app/views/login-search/claim-creation/add-travel-dates.html')
+  } else if (location === 'irish') {
+    res.redirect('/app/views/login-search/claim-creation/add-travel-dates.html')
+  } else if (location === 'other') {
+    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+  } else if (location === 'dual') {
+    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+   } else if (location === 'stateless') {
+    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+  
+    
   } else {
-    // If they hit continue without selecting an option, reload the current page
-    res.redirect('/cruise-ship')          // Change to the name of this current page
+    // Fallback if they managed to submit without selecting an option
+    res.redirect('/question')
   }
+})
 
+router.post('/switzerland-refund', function (req, res) {
+  // Get the answer from the form data
+  const inSwitzerland = req.session.data['inSwitzerland']
+
+  // Check the answer and branch the user
+  if (inSwitzerland === 'yes') {
+    res.redirect('/app/views/login-search/claim-creation/family-member.html')
+  } else {
+    res.redirect('app/views/login-search/claim-creation/add-travel-dates.html')
+  }
 })
 
 module.exports = router
