@@ -62,5 +62,17 @@ router.post('/dependant-answer', function (req, res) {
   }
 })
 
+router.post('/u18-answer', function (req, res) {
+  // Get the answer from the form data
+  const under18 = req.session.data['under18']
+
+  // Check the answer and branch the user
+  if (under18 === 'yes') {
+    res.redirect('app/views/login-search/claim-creation/claim-check-answers.html')
+  } else {
+    res.redirect('app/views/login-search/claim-creation/add-dependant.html')
+  }
+})
+
 module.exports = router
 
