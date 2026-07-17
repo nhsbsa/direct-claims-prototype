@@ -61,7 +61,7 @@
         <a href="add-personal-details.html" class="nhsuk-button nhsuk-button--secondary" id="createClaimButton" role="button" data-module="nhsuk-button">Create a new person record</a>
       </div>
     </div>
-            
+
          
 
           
@@ -70,12 +70,13 @@
       <div class="nhsuk-grid-column-full">
         <div class="nhsuk-card">
           <div class="nhsuk-card__content">
-          
-           
+        
+            
             <form action="search/with-pagination#results" method="post">
-              <div class="nhsuk-hint" id="contact-hint">
-                Search using first name, last name and date of birth, or the person ID
-              </div>
+              <h2 class="nhsuk-heading-m">
+          Search using one or more personal details
+        </h2>
+    
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                   <div class="nhsuk-form-group">
@@ -107,13 +108,27 @@
               </div>
 
               <hr class="nhsuk-u-width-two-thirds" style="margin:10px 0px 10px 0px;">
-              
+            
+             <h2 class="nhsuk-heading-m">
+          Or search using only one unique identifier
+        </h2>
 
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
                       Person ID
+                    </label>
+                    <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
+                  </div>
+                </div>
+                </div>
+
+                <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
+                      National Insurance number
                     </label>
                     <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
                   </div>
