@@ -1,90 +1,112 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
 {% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
 
-{% set pageName = "Claim ID Dashboard" %}
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
 
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block beforeContent %}
-  
-
-  <div class="nhsuk-phase-banner">
-    <p class="nhsuk-phase-banner__content">
-      <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-        Alpha
-      </strong>
-      <span class="nhsuk-phase-banner__text">
-        This is a new service undergoing testing
-      </span>
-    </p>
-  </div>
-
-  <a href="search-person.html" class="nhsuk-back-link">
-    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
-      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-    </svg>
-    Back
-  </a>
 {% endblock %}
 
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+ <a href="search-person.html" class="govuk-back-link">Back</a>
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+
+
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <h1 class="nhsuk-heading-xl">
-      Claim ID
-    </h1>
-    
-    <ul class="nhsuk-grid-row nhsuk-card-group">
-      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-        <div class="nhsuk-card">
-          <div class="nhsuk-card__content">
-            <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-1">
-              Initial claim details
-            </h2>
-            <hr class="nhsuk-section-break nhsuk-section-break--s nhsuk-section-break--visible nhsuk-u-margin-bottom-3">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-xl">
+            Claim ID
+        </h1>
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-full nhsuk-card-group__item">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-full">
+                                <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-1">
+                                    Claim information
+                                </h2>
+                            </div>
+                        </div>
+                        <hr
+                            class="nhsuk-section-break nhsuk-section-break--s nhsuk-section-break--visible nhsuk-u-margin-bottom-3">
+                        <dl class="nhsuk-summary-list">
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">Full name</dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    Barry White
+                                </dd>
+                                <dd class="nhsuk-summary-list__actions"></dd>
+                            </div>
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">Date created</dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    1 March 2025
+                                </dd>
+                            </div>
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">Claim type</dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    EHIC/GHIC
+                                </dd>
+                                <dd class="nhsuk-summary-list__actions"></dd>
+                            </div>
+                            
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">Status</dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    <strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong>
+                                </dd>
+                                <dd class="nhsuk-summary-list__actions"><a href="change-status.html">Change status</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </li>
             
-            <dl class="nhsuk-summary-list">
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Name of claimant</dt>
-                <dd class="nhsuk-summary-list__value">Barry White</dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Date created</dt>
-                <dd class="nhsuk-summary-list__value">1 March 2025</dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Claim type</dt>
-                <dd class="nhsuk-summary-list__value">EHIC/GHIC</dd>
-              </div>
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Current status</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <strong class="nhsuk-tag nhsuk-tag--grey">Not started</strong>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-      
-      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-        <div class="nhsuk-card">
-          <div class="nhsuk-card__content">
-            <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-1">
-              Task list
-            </h2>
-            <ul class="nhsuk-task-list">
-              <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
-                <div class="nhsuk-task-list__name-and-hint">
-                  <a class="nhsuk-link nhsuk-task-list__link" href="eligbility-check.html">Eligibility checks</a>
                 </div>
-                <div class="nhsuk-task-list__status" id="select-invoices">
-                  <strong class="nhsuk-tag nhsuk-tag--blue">Not yet started</strong>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+           
+    
+    
 </div>
 
 <div class="nhsuk-grid-row">
@@ -96,8 +118,14 @@
         <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
           <a class="nhsuk-tabs__tab" href="#details">Details</a>
         </li>
+        <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+          <a class="nhsuk-tabs__tab" href="#task-list">Task-list</a>
+        </li>
         <li class="nhsuk-tabs__list-item">
-          <a class="nhsuk-tabs__tab" href="#audit-log">Audit log</a>
+          <a class="nhsuk-tabs__tab" href="#audit-log">Claim history</a>
+        </li>
+        <li class="nhsuk-tabs__list-item">
+          <a class="nhsuk-tabs__tab" href="#case-notes">Case notes</a>
         </li>
       </ul>
 
@@ -143,8 +171,82 @@
           </div>
         </dl>
       </div>
+      <div class="nhsuk-tabs__panel" id="task-list">
+
+        <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+
+        <h2 class="nhsuk-heading-m">Claim tasks</h2>
+
+        <ul class="nhsuk-task-list">
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-1-status">
+                Eligibility pre-checks
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status nhsuk-task-list__status--completed" id="your-details-1-status">
+               <strong class="nhsuk-tag nhsuk-tag--blue">
+              Not started
+              </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Create new SO67
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Update the claim
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Add bank details
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Authorise payment
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+        </ul>
+        </div>
+        </div>
+        </div>
 
       <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="audit-log">
+
         <div class="nhsbsa-timeline__item nhsuk-u-margin-bottom-6">
           <div class="nhsbsa-timeline__header">
             <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
@@ -164,4 +266,6 @@
     </div>
   </div>
 </div>
+
+</main>
 {% endblock %}
