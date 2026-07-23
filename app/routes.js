@@ -125,5 +125,17 @@ router.post('/u18-answer-1', function (req, res) {
     res.redirect('app/views/login-search/new-person/add-dependant.html')
   }
 })
+
+router.post('/switzerland-2', function (req, res) {
+  // Get the answer from the form data
+  const inSwitzerland = req.session.data['inSwitzerland']
+
+  // Check the answer and branch the user
+  if (inSwitzerland === 'yes') {
+    res.redirect('/app/views/login-search/new-person/family-member.html')
+  } else {
+    res.redirect('app/views/login-search/new-person/add-travel-dates.html')
+  }
+})
 module.exports = router
 
