@@ -74,5 +74,56 @@ router.post('/u18-answer', function (req, res) {
   }
 })
 
+router.post('/switzerland-refund-2', function (req, res) {
+  const location = req.session.data['refundNationality']
+
+  if (location === 'uk') {
+    res.redirect('/app/views/login-search/new-person/add-travel-dates.html')
+  } else if (location === 'irish') {
+    res.redirect('/app/views/login-search/new-person/add-travel-dates.html')
+  } else if (location === 'other') {
+    res.redirect('/app/views/login-search/new-person/switzerland.html')
+  } else if (location === 'dual') {
+    res.redirect('/app/views/login-search/new-person/switzerland.html')
+   } else if (location === 'stateless') {
+    res.redirect('/app/views/login-search/new-person/switzerland.html')
+   }
+})
+
+router.post('/ohs-answer-2', function (req, res) {
+  // Get the answer from the form data
+  const ohsNumber = req.session.data['ohsNumber']
+
+  // Check the answer and branch the user
+  if (ohsNumber === 'yes') {
+    res.redirect('app/views/login-search/new-person/add-ghic.html')
+  } else {
+    res.redirect('app/views/login-search/new-person/dependant.html')
+  }
+})
+
+router.post('/dependant-answer-1', function (req, res) {
+  // Get the answer from the form data
+  const newDependant = req.session.data['newDependant']
+
+  // Check the answer and branch the user
+  if (newDependant === 'yes') {
+    res.redirect('app/views/login-search/new-person/add-child.html')
+  } else {
+    res.redirect('app/views/login-search/new-person/claim-check-answers.html')
+  }
+})
+
+router.post('/u18-answer-1', function (req, res) {
+  // Get the answer from the form data
+  const under18 = req.session.data['under18']
+
+  // Check the answer and branch the user
+  if (under18 === 'yes') {
+    res.redirect('app/views/login-search/new-person/claim-check-answers.html')
+  } else {
+    res.redirect('app/views/login-search/new-person/add-dependant.html')
+  }
+})
 module.exports = router
 
