@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Direct Claims',
+  serviceName: 'Apply for a refund for treatment abroad',
 
   // Port to run the prototype on locally
   port: 3000
