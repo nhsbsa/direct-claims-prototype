@@ -1,0 +1,73 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  <link rel="stylesheet" href="https://alphagov.github.io/govuk-country-and-territory-autocomplete/dist/location-autocomplete.min.css" />
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+
+    <h1 class="nhsuk-heading-xl">
+            Log in to Apply for a refund for treatment abroad
+        </h1>
+
+        <p> in to process refund claims for Apply for a refund for treatment abroad.</p>
+ 
+        <p>Use your Microsoft account to log in to this service.</p>
+
+        <form action="landing.html"post novalidate>
+
+
+    
+<button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Log in
+          </button>
+</form>
+
+
+
+{% endblock %}
