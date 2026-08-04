@@ -67,7 +67,7 @@
 
           
 
-          <div class="nhsuk-grid-row">
+           <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
         <div class="nhsuk-card">
           <div class="nhsuk-card__content">
@@ -77,18 +77,25 @@
               <h2 class="nhsuk-heading-m">
           Search using one or more personal details
         </h2>
-    
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-one-third">
+
+          
+          <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
                   <div class="nhsuk-form-group">
+                    <div class="nhsuk-hint" id="appointment-date-hint">
+      Search using an initial, beginning of last name or full name. For example, J, Joh or John
+    </div>
                     <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
                       First name
                     </label>
                     <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
                   </div>
                 </div>
-                <div class="nhsuk-grid-column-one-third">
+                <div class="nhsuk-grid-column-full">
                   <div class="nhsuk-form-group">
+                    <div class="nhsuk-hint" id="appointment-date-hint">
+      Search using an initial, beginning of last name or full name – for example, S, Smi or Smith
+    </div>
                     <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-ref">
                       Last name
                     </label>
@@ -97,18 +104,51 @@
                 </div>
 
 
-                <div class="nhsuk-grid-column-one-third">
+                <div class="nhsuk-grid-column-full">
                   <div class="nhsuk-form-group">
-                    <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-ref">
-                      Date of birth
-                    </label>
-                    <input class="nhsuk-input " id="claim-ref" name="claim-ref" type="text">
-                  </div>
+                    <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="appointment-date-hint">
+       <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-ref">
+        When was your appointment?
+       </label>
+    </legend>
+    <div class="nhsuk-hint" id="appointment-date-hint">
+      Always include the year (day and month are optional) – for example, 28 9 2023
+    </div>
+    <div class="nhsuk-date-input" id="appointment-date">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-day">
+            Day
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment-date-day" name="appointmentDate[day]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-month">
+            Month
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment-date-month" name="appointmentDate[month]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="appointment-date-year">
+            Year
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment-date-year" name="appointmentDate[year]" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
                 </div>
 
               </div>
 
-              <hr class="nhsuk-u-width-two-thirds" style="margin:10px 0px 10px 0px;">
+              <hr class="nhsuk-u-width-full" style="margin:10px 0px 10px 0px;">
             
              <h2 class="nhsuk-heading-m">
           Or search using only one unique identifier
@@ -131,6 +171,9 @@
                     <label class="nhsuk-label nhsuk-u-font-weight-bold" for="claim-id">
                       National Insurance number
                     </label>
+                     <div class="nhsuk-hint" id="appointment-date-hint">
+      For example, QQ 12 34 56 C or QQ 12 34 56
+    </div>
                     <input class="nhsuk-input " id="claim-id" name="claim-id" type="text">
                   </div>
                 </div>
@@ -148,7 +191,7 @@
           </div>
         </div>
       </div>
-    </div>
+   
     <!-- End of search inputs -->
 
   </div>
