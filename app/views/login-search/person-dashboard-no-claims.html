@@ -1,0 +1,171 @@
+ <!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+<a href="search-results2.html" class="govuk-back-link">Back</a>
+
+
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            Paul McCartney's record
+              <span class="nhsuk-caption-l">Person ID: 123456</span>
+        </h1>
+        
+    </div>
+    <div class="nhsuk-grid-column-one-third" style="text-align: right">
+        <a href="/app/views/login-search/claim-creation/create-claim.html" class="nhsuk-button nhsuk-button--secondary" role="button" data-module="nhsuk-button">Create a new
+            claim</a>
+    </div>
+</div>
+<!-- End of title block -->
+
+
+<!-- End header block -->
+
+<div class="nhsuk-tabs" data-module="nhsuk-tabs">
+  <h2 class="nhsuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="nhsuk-tabs__list">
+    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+      <a class="nhsuk-tabs__tab" href="#personal-details">
+        Personal details
+      </a>
+    </li>
+    <li class="nhsuk-tabs__list-item">
+      <a class="nhsuk-tabs__tab" href="#claims">
+        Claims
+      </a>
+    </li>
+  </ul>
+
+
+  <div class="nhsuk-tabs__panel" id="personal-details">
+      
+    <h2 class="nhsuk-heading-m">
+          Personal details
+        </h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Full name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+             Paul McCartney
+            </dd>   
+            
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              18 June 1946
+            </dd>   
+            
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              National Insurance number
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+             AB123456A
+            </dd>   
+            
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              10 Penny Lane, Liverpool, L4 0TH
+            </dd>   
+            
+        </div>
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              paul.mac@beatles.co.uk
+            </dd>   
+            
+        </div>
+
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Phone number
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              01632 960123
+            </dd>   
+            
+        </div>
+    </dl>
+
+   
+  </div>
+  
+
+  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="claims">
+
+       There are no claim records to show.
+  </div>
+  
+
+            
+            </main>
+
+{% endblock %}
