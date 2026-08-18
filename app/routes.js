@@ -56,9 +56,9 @@ router.post('/dependant-answer', function (req, res) {
 
   // Check the answer and branch the user
   if (newDependant === 'yes') {
-    res.redirect('app/views/login-search/claim-creation/add-child.html')
-  } else {
     res.redirect('app/views/login-search/claim-creation/claim-check-answers.html')
+  } else {
+    res.redirect('app/views/login-search/claim-creation/add-dependant.html')
   }
 })
 
@@ -108,9 +108,9 @@ router.post('/dependant-answer-1', function (req, res) {
 
   // Check the answer and branch the user
   if (newDependant === 'yes') {
-    res.redirect('app/views/login-search/new-person/add-child.html')
-  } else {
     res.redirect('app/views/login-search/new-person/claim-check-answers.html')
+  } else {
+    res.redirect('app/views/login-search/new-person/add-dependant.html')
   }
 })
 

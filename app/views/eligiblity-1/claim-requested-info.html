@@ -57,13 +57,13 @@
             Claim ID
         </h1>
         <ul class="nhsuk-grid-row nhsuk-card-group">
-            <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
+            <li class="nhsuk-grid-column-full nhsuk-card-group__item">
                 <div class="nhsuk-card">
                     <div class="nhsuk-card__content">
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-full">
                                 <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-1">
-                                    Initial claim details
+                                    Claim information
                                 </h2>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             class="nhsuk-section-break nhsuk-section-break--s nhsuk-section-break--visible nhsuk-u-margin-bottom-3">
                         <dl class="nhsuk-summary-list">
                             <div class="nhsuk-summary-list__row">
-                                <dt class="nhsuk-summary-list__key">Name of claimant</dt>
+                                <dt class="nhsuk-summary-list__key">Full name</dt>
                                 <dd class="nhsuk-summary-list__value">
                                     Barry White
                                 </dd>
@@ -92,168 +92,163 @@
                             </div>
                             
                             <div class="nhsuk-summary-list__row">
-                                <dt class="nhsuk-summary-list__key">Current status</dt>
+                                <dt class="nhsuk-summary-list__key">Status</dt>
                                 <dd class="nhsuk-summary-list__value">
-                                    <strong class="nhsuk-tag nhsuk-tag--yellow">Info received</strong>
+                                    <strong class="nhsuk-tag nhsuk-tag--yellow">Information requested</strong>
                                 </dd>
-                                <dd class="nhsuk-summary-list__actions"></dd>
+                                <dd class="nhsuk-summary-list__actions"><a href="change-status.html">Change status</a></dd>
                             </div>
                         </dl>
                     </div>
                 </div>
             </li>
-            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                <div class="nhsuk-card">
-                    <div class="nhsuk-card__content">
-                        <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-1">
-                            Task list
-                        </h2>
-                        <ul class="nhsuk-task-list">
-                            <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
-                                <div class="nhsuk-task-list__name-and-hint"><a class="nhsuk-link nhsuk-task-list__link"
-                                        href="eligbility-check.html" aria-describedby="">Eligibility checks</a>
-                                </div>
-                                <div class="nhsuk-task-list__status" id="select-invoices"><strong
-                                        class="nhsuk-tag nhsuk-tag--blue">
-                                        In progress
-                                    </strong></div>
-
-                                    
-                            </li>
-
-                            
-                        </ul>
-
-                        
-                    </div>
+            
                 </div>
-                
-            </li>
-        </ul>
-    </div>
-
+           
+    
     
 </div>
 
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-        <div class="nhsuk-tabs" data-module="nhsuk-tabs">
-            <h2 class="nhsuk-tabs__title">Contents</h2>
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+      <h2 class="nhsuk-tabs__title">Contents</h2>
 
-            <!-- Start of tab titles -->
-            <ul class="nhsuk-tabs__list">
-                <li class="nhsuk-tabs__list-item">
-                    <a class="nhsuk-tabs__tab" href="#details"> Details </a>
-                </li>
-                <li class="nhsuk-tabs__list-item">
-                    <a class="nhsuk-tabs__tab" href="#audit-log"> Audit log </a>
-                </li>
-            </ul>
-            <!-- End of tab titles -->
+      <ul class="nhsuk-tabs__list">
 
-             <div class="nhsuk-tabs__panel" id="details">
-      
-    <h2 class="nhsuk-heading-m">
-          Claim information
-        </h2>
+         <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+          <a class="nhsuk-tabs__tab" href="#task-list">Task list</a>
+        </li>
+
+        <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+          <a class="nhsuk-tabs__tab" href="#details">Details</a>
+        </li>
+       
+        <li class="nhsuk-tabs__list-item">
+          <a class="nhsuk-tabs__tab" href="#audit-log">History</a>
+        </li>
+        <li class="nhsuk-tabs__list-item">
+          <a class="nhsuk-tabs__tab" href="#case-notes">Notes</a>
+        </li>
+      </ul>
+
+      <div class="nhsuk-tabs__panel" id="details">
+        <h2 class="nhsuk-heading-m">Claim information</h2>
 
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Nationality of person
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              British
-            </dd>   
-            
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Travel dates
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              20/05/2026 to 26/05/2026
-            </dd>   
-            
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Currency
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-             Euro
-            </dd>   
-            
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Refund amount
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              £150.67
-            </dd>   
-            
-        </div>
-
-         <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Country of claim
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              France
-            </dd>   
-            
-        </div>
-
+            <dt class="nhsuk-summary-list__key">Nationality of person</dt>
+            <dd class="nhsuk-summary-list__value">British</dd>   
+          </div>
           <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Treatment dates
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              23/05/2026 to 23/05/2026
-            </dd>   
-            
-        </div>
-
+            <dt class="nhsuk-summary-list__key">Travel dates</dt>
+            <dd class="nhsuk-summary-list__value">20/05/2026 to 26/05/2026</dd>   
+          </div>
           <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              UK EHIC/GHIC issued
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Yes
-            </dd>   
-            
-        </div>
-
+            <dt class="nhsuk-summary-list__key">Currency</dt>
+            <dd class="nhsuk-summary-list__value">Euro</dd>   
+          </div>
           <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              UK EHIC/GHIC issue date
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              20/05/2026
-            </dd>   
-            
+            <dt class="nhsuk-summary-list__key">Refund amount</dt>
+            <dd class="nhsuk-summary-list__value">£150.67</dd>   
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Country of claim</dt>
+            <dd class="nhsuk-summary-list__value">France</dd>   
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">Treatment dates</dt>
+            <dd class="nhsuk-summary-list__value">23/05/2026 to 23/05/2026</dd>   
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">UK EHIC/GHIC issued</dt>
+            <dd class="nhsuk-summary-list__value">Yes</dd>   
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">UK EHIC/GHIC issue date</dt>
+            <dd class="nhsuk-summary-list__value">20/05/2026</dd>   
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">OHS reference number</dt>
+            <dd class="nhsuk-summary-list__value">12345678</dd>   
+          </div>
+        </dl>
+      </div>
+      <div class="nhsuk-tabs__panel" id="task-list">
+
+        <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+
+        <h2 class="nhsuk-heading-m">Claim tasks</h2>
+
+        <ul class="nhsuk-task-list">
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="eligbility-check.html" aria-describedby="your-details-1-status">
+                Eligibility pre-checks
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status nhsuk-task-list__status--completed" id="your-details-1-status">
+               <strong class="nhsuk-tag nhsuk-tag--blue">
+              In progress
+              </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Create new SO67
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Update the claim
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Add bank details
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+          <li class="nhsuk-task-list__item nhsuk-task-list__item--with-link">
+            <div class="nhsuk-task-list__name-and-hint">
+              <a class="nhsuk-link nhsuk-task-list__link" href="#" aria-describedby="your-details-2-status">
+                Authorise payment
+              </a>
+            </div>
+            <div class="nhsuk-task-list__status" id="your-details-2-status">
+              <strong class="nhsuk-tag nhsuk-tag--blue">
+        Not started
+      </strong>
+            </div>
+          </li>
+        </ul>
+        </div>
+        </div>
         </div>
 
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              OHS reference number
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              12345678
-            </dd>   
-            
-        </div>
-    </dl>
-    </div>
-
-     
-  <div class="nhsuk-tabs__panel" id="audit-log">
-
-          
+      <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="audit-log">
 
         <div class="nhsbsa-timeline nhsuk-u-margin-0">
 
@@ -299,11 +294,62 @@
 
             </div>
             <!-- *** End of history tab *** -->
+
+      <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="case-notes">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+            <h2 class="nhsuk-heading-m">Notes</h2>
+        </div>
+        <div class="nhsuk-grid-column-one-third">
+           <a href="add-note.html" style="float:right;" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button">Add note</a>
+               
         </div>
     </div>
+    <table role="table" class="nhsuk-table-responsive">
+                        <thead role="rowgroup" class="nhsuk-table__head">
+                          <tr role="row">
+                            <th role="columnheader" scope="col" style="width: 20%;">Date and time</th>
+                            <th role="columnheader" scope="col" style="width: 20%;">Added by</th>
+                            <th role="columnheader" scope="col" style="width: 50%;">Comments</th>
+                          </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                      
+                          
+                          <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Date and time</span>
+                               <p>18th August 2026 at 2:25pm</p>
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Added by</span>
+                              <p>Florence Nightingale</p>
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                              <span class="nhsuk-table-responsive__heading">Comments</span>
+                              <p>This is what the comments would look like.</p>
+                            </td>
+                            
+                          </tr>
+                      
+                    
+                            
+                    
+                          </tbody>
+                        </table>
+                    
+                      
 </div>
 
+      </div>
+
+
+      </div>
+
+    </div>
   </div>
+</div>
 
 </main>
 {% endblock %}
