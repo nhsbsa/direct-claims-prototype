@@ -203,11 +203,22 @@
                 <div class="nhsuk-grid-row nhsuk-u-padding-bottom-2">
                     <div class="nhsuk-grid-column-two-thirds">
                         <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Showing 1 result</h3>
+
+       
+
                         <p class="nhsuk-u-margin-bottom-2 nhsuk-body-s">Searched by: <strong class="nhsuk-tag nhsuk-tag--aqua-green">Paul</strong>
                             <strong class="nhsuk-tag nhsuk-tag--aqua-green">McCartney</strong>
                             <strong class="nhsuk-tag nhsuk-tag--aqua-green">18/06/1942</strong>
                         </p>
+
+                                         <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>Your search has returned too many results – make it more specific</p>
+</div>
                     </div>
+
+                    
+                    
                     <div class="nhsuk-grid-column-one-third">
                         <div class="nhsuk-form-group" style="float:right;">
                             <label class="nhsuk-label" for="results">
@@ -220,8 +231,11 @@
                             </select>
                         </div>
                     </div>
+
+                    
                 </div>
 
+                
                 <!-- Start person search results -->
                 <div class="nhsuk-grid-row" id="search-results">
                     <div class="nhsuk-grid-column-full">
@@ -246,16 +260,22 @@
                                                     </h1>
                                                 </legend>
                                                 <div class="nhsuk-radios--small">
-                                                    <div class="nhsuk-radios__item">
-                                                        <input class="nhsuk-radios__input" id="sort-by-last-name" name="sort-by" type="radio" value="last-name" checked="checked">
-                                                        <label class="nhsuk-label nhsuk-radios__label" for="sort-by-last-name">
-                                                            Last name
+                                                  <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input" id="sort-by-id" name="sort-by" type="radio" value="id">
+                                                        <label class="nhsuk-label nhsuk-radios__label" for="sort-by-id">
+                                                            Person ID
                                                         </label>
                                                     </div>
                                                     <div class="nhsuk-radios__item">
                                                         <input class="nhsuk-radios__input" id="sort-by-first-name" name="sort-by" type="radio" value="first-name">
                                                         <label class="nhsuk-label nhsuk-radios__label" for="sort-by-first-name">
                                                             First name
+                                                        </label>
+                                                    </div>
+                                                    <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input" id="sort-by-last-name" name="sort-by" type="radio" value="last-name" checked="checked">
+                                                        <label class="nhsuk-label nhsuk-radios__label" for="sort-by-last-name">
+                                                            Last name
                                                         </label>
                                                     </div>
                                                     <div class="nhsuk-radios__item">
@@ -270,12 +290,7 @@
                                                             National Insurance number
                                                         </label>
                                                     </div>
-                                                    <div class="nhsuk-radios__item">
-                                                        <input class="nhsuk-radios__input" id="sort-by-id" name="sort-by" type="radio" value="id">
-                                                        <label class="nhsuk-label nhsuk-radios__label" for="sort-by-id">
-                                                            OHS reference
-                                                        </label>
-                                                    </div>
+                                                    
                                                 </div>
                                             </fieldset>
                                         </div>
@@ -328,19 +343,23 @@
                         <!-- TABLE START -->
                         <thead class="nhsuk-table__head">
                             <tr class="nhsuk-table__row">
+                              <th class="nhsuk-table__header" aria-sort="none" scope="col">Person ID</th>
                                 <th class="nhsuk-table__header" aria-sort="none" scope="col">First name</th>
                                 <th class="nhsuk-table__header" aria-sort="none" scope="col">Last name</th>
+                                 <th class="nhsuk-table__header" aria-sort="none" scope="col">Date of birth</th>
                                 <th class="nhsuk-table__header" aria-sort="none" scope="col">National Insurance number</th>
-                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Last viewed</th>
+                                
                                 <th class="nhsuk-table__header" aria-sort="none" scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody class="nhsuk-table__body nhsuk-body-">
                             <tr class="nhsuk-table__row">
+                              <td class="nhsuk-table__cell">12345678</td>
                                 <td class="nhsuk-table__cell">Paul</td>
                                 <td class="nhsuk-table__cell">McCartney</td>
+                                 <td class="nhsuk-table__cell">18 Jun 1942</td>
                                    <td class="nhsuk-table__cell">AB12346A</td>
-                                <td class="nhsuk-table__cell">4 May 2026</td>
+                                
                                 <td class="nhsuk-table__cell">
                                     <a href="person-dashboard.html">View<span class="nhsuk-u-visually-hidden">person record</span></a>
                                 </td>
