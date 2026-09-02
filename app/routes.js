@@ -44,9 +44,9 @@ router.post('/ohs-answer', function (req, res) {
 
   // Check the answer and branch the user
   if (ohsNumber === 'yes') {
-    res.redirect('app/views/login-search/claim-creation/add-ghic.html')
+    res.redirect('app/views/login-search/ohs-entitlement.html')
   } else {
-    res.redirect('app/views/login-search/claim-creation/dependant.html')
+    res.redirect('app/views/login-search/check-answers.html')
   }
 })
 
