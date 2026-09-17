@@ -37,7 +37,7 @@
    <div class="nhsuk-phase-banner">
   <p class="nhsuk-phase-banner__content">
     <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-      Alpha
+      Beta
     </strong>
     <span class="nhsuk-phase-banner__text">
       This is a new service undergoing testing
@@ -45,26 +45,57 @@
   </p>
 </div>
 
-<a class="nhsuk-back-link" href="search-person.html">
-  Back
-</a>
+ <a href="claim-check-answers.html" class="govuk-back-link">Back</a>
+
+
   <main class="nhsuk-main-wrapper" id="maincontent">
 
-    <h1 class="nhsuk-heading-xl">
-           Which country did the treatment take place in?
-        </h1>
+     <form action="bank-details.html" method=post novalidate>
 
-        <form action="treatment-dates.html" method="post" novalidate>
+   
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
 
+        <div class="nhsuk-panel">
+          <h1 class="nhsuk-panel__title">
+           Payment amount entered
+          </h1>
+          
+        </div>
+         <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+             Payment amount in British pounds
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+            1483.67
+            </dd>
+          </div>
+          
+        </dl>
+<h2>What happens next</h2>
+<p>You can now:</p>
 
-   <div class="nhsuk-form-group">
+<ul class="nhsuk-list nhsuk-list--bullet">
+  <li>request the customer's bank details/li>
+  <li>update the claim status to 'Awaiting bank details'</li>
   
-  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="inputWidth20" type="text">
-</div>
+</ul>
+      </div>
+    </div>
+
+
+
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Continue
+            Finish
           </button>
+
+          </div>
+</div>
+
+</main>
+          
 </form>
 
 {% endblock %}

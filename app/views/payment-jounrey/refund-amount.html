@@ -4,10 +4,6 @@
 
 <!-- Extends the layout from /app/views/layout.html -->
 {% extends 'layout.html' %}
-
-{% from "radios/macro.njk" import radios %}
-{% from "fieldset/macro.njk" import fieldset %}
-{% from "hint/macro.njk" import hint %}
 <!--
   In /app/views/layout.html you can:
     - change the header and footer
@@ -41,7 +37,7 @@
    <div class="nhsuk-phase-banner">
   <p class="nhsuk-phase-banner__content">
     <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-      Alpha
+      Beta
     </strong>
     <span class="nhsuk-phase-banner__text">
       This is a new service undergoing testing
@@ -49,42 +45,57 @@
   </p>
 </div>
 
-<a class="nhsuk-back-link" href="search-person.html">
-  Back
-</a>
+<a href="add-address.html" class="govuk-back-link">Back</a>
+
   <main class="nhsuk-main-wrapper" id="maincontent">
 
+     <form action="check-payment.html" method="post" novalidate>
+
+   
     <h1 class="nhsuk-heading-xl">
-           Did the treatment take place on a cruise ship?
+           What is the payment amount?
         </h1>
 
-        <form action="treatment-country.html" method="post" novalidate>
+        <p>Enter the amount in the currency of the country of treatment - we'll convert it to British pounds</p>
+
+    <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="sort-by">
+    Select currency
+  </label>
+
+  <select class="nhsuk-select" id="sort-by" name="sortBy">
+    <option value="recently-published" selected>-</option>
+    <option value="BGN">Bulgarian Lev</option>
+<option value="HRK">Croatian Kuna</option>
+<option value="CYP">Cyprus Pound</option>
+<option value="CZK">Czech Koruna</option>
+<option value="DKK">Danish Krone</option>
+<option value="EEK">Estonian Kroon</option>
+<option value="EUR">Euro</option>
+<option value="GIP">Gibraltar Pound</option>
+<option value="HUF">Hungarian Forint</option>
+<option value="GBP">Pound Sterling</option>
+<option value="CHF">Swiss Franc</option>
+
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
+    Enter payment amount
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="inputWidth10" type="text">
+</div>
 
 
-  
-{{ radios({
-  idPrefix: "cruise-ship",
-  name: "cruiseShip",
 
-  hint: {
-    text: "Select 1 option"
-  },
-  value: data.cruiseShip,
-  items: [
-    {
-      value: "Yes",
-      text: "Yes"
-    },
-    {
-      value: "No",
-      text: "No"
-    }
-    
-  ]
-}) }}
+       
+
+
+
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Continue
+            Convert
           </button>
 </form>
 
