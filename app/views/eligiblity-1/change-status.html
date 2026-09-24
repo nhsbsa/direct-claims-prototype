@@ -45,42 +45,51 @@
   </p>
 </div>
 
-<a href="add-ohs-record.html" class="govuk-back-link">Back</a>
+<a href="claim-dashboard.html" class="govuk-back-link">Back</a>
 
   <main class="nhsuk-main-wrapper" id="maincontent">
 
     <h1 class="nhsuk-heading-xl">
-            Change status of the claim
+            Change claim status
         </h1>
 
-        <form action="/u18-answer" method="post" novalidate>
+        <form action="check-status-change.html" method="post" novalidate>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="sort-by">
-    Select status
+    Select new status
   </label>
   <select class="nhsuk-select" id="sort-by" name="sortBy">
-    <option value="recently-published" selected>Recently published</option>
-    <option value="recently-updated">Recently updated</option>
-    <option value="most-views">Most views</option>
-    <option value="most-comments">Most comments</option>
+    <option value="no-option" selected>-</option>
+    <option value="to-check">To check</option>
+    <option value="in-scanning">In scanning</option>
+    <option value="to-review">To review</option>
+    <option value="evidence-reviewed">Evidence reviewed</option>
+    <option value="residency-checked">Residency checked</option>
+    <option value="awaiting-decision">Awaiting decision</option>
+    <option value="decision-received">Decision received</option>
+    <option value="awaiting-bank-details">Awaiting bank details</option>
+    <option value="to-authorise">To authorise</option>
+    <option value="authorised">Authorised</option>
+    <option value="paid">Paid</option>
+    <option value="payment-failed">Payment failed</option>
+    <option value="information-requested">Information requested</option>
+    <option value="rejected">Rejected</option>
   </select>
 </div>
-   
+<br>   
 <div class="nhsuk-form-group">
-  <h1 class="nhsuk-label-wrapper">
-    <label class="nhsuk-label nhsuk-label--m" for="example">
-      Add a supporting note
+    <label class="nhsuk-label" for="example">
+      Add a comment (optional)
     </label>
-  </h1>
   <div class="nhsuk-hint" id="example-hint">
-    Detail the reason for the change of status
+    This will be displayed in the History section alongside the status change. You can enter up to 500 characters.
   </div>
   <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
 </div>
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Change status
+            Save and continue
           </button>
 </form>
 
