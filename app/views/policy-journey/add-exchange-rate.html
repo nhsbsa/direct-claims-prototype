@@ -64,17 +64,18 @@
 
   <select class="nhsuk-select" id="sort-by" name="sortBy">
     <option value="recently-published" selected>-</option>
-    <option value="BGN">Bulgarian Lev</option>
-<option value="HRK">Croatian Kuna</option>
-<option value="CYP">Cyprus Pound</option>
-<option value="CZK">Czech Koruna</option>
-<option value="DKK">Danish Krone</option>
-<option value="EEK">Estonian Kroon</option>
+    <option value="BGN">Bulgarian lev</option>
+<option value="HRK">Croatian kuna</option>
+<option value="CZK">Czech koruna</option>
+<option value="DKK">Danish krone</option>
 <option value="EUR">Euro</option>
-<option value="GIP">Gibraltar Pound</option>
-<option value="HUF">Hungarian Forint</option>
-<option value="GBP">Pound Sterling</option>
-<option value="CHF">Swiss Franc</option>
+<option value="HUF">Hungarian forint</option>
+<option value="ISK">Icelandic krona</option>
+<option value="NOK">Norwegian krone</option>
+<option value="PLN">Polish zloty</option>
+<option value="RON">Romanian leu</option>
+<option value="CHF">Swiss franc</option>
+<option value="SEK">Swedish krona</option>
 
   </select>
 </div>
@@ -89,6 +90,9 @@
   <label class="nhsuk-label" for="input-width-10">
     Enter exchange rate
   </label>
+  <div class="nhsuk-hint" id="appointment-date-hint">
+      For example, 1.12345
+    </div>
   <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="inputWidth10" type="text">
 </div>
 
@@ -96,8 +100,11 @@
   <fieldset class="nhsuk-fieldset" role="group" aria-describedby="appointment-date-hint">
   
 <label class="nhsuk-label" for="input-width-10">
-    Enter effective date
+    Enter start date
   </label>
+  <div class="nhsuk-hint" id="appointment-date-hint">
+      For example, 28 9 2026
+    </div>
     <div class="nhsuk-date-input" id="appointment-date">
       <div class="nhsuk-date-input__item">
         <div class="nhsuk-form-group">
@@ -135,7 +142,7 @@
 
 <div class="nhsuk-button-group">
   <a class="nhsuk-button" href="check-your-answers.html" role="button" draggable="false">
-    Add exchange rate
+    Continue
   </a>
   
   <a class="nhsuk-button nhsuk-button--secondary" href="exchange-rate-search.html" role="button" draggable="false">

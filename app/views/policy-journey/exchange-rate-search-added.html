@@ -59,7 +59,7 @@
         </h1>
       </div>
       <div class="nhsuk-grid-column-one-third" style="text-align:right;">
-        <a href="add-exchange-rate.html" class="nhsuk-button nhsuk-button--secondary" id="createClaimButton" role="button" data-module="nhsuk-button">Add new exchange rate</a>
+        <a href="add-exchange-rate.html" class="nhsuk-button nhsuk-button--secondary" id="createClaimButton" role="button" data-module="nhsuk-button">Add a new exchange rate</a>
       </div>
     </div>
 
@@ -82,18 +82,19 @@
                     <div class="nhsuk-form-group">
   
   <select class="nhsuk-select" id="sort-by" name="sortBy">
-    <option value="recently-published" selected>Euro</option>
-    <option value="BGN">Bulgarian Lev</option>
-<option value="HRK">Croatian Kuna</option>
-<option value="CYP">Cyprus Pound</option>
-<option value="CZK">Czech Koruna</option>
-<option value="DKK">Danish Krone</option>
-<option value="EEK">Estonian Kroon</option>
-<option value="EUR">Euro</option>
-<option value="GIP">Gibraltar Pound</option>
-<option value="HUF">Hungarian Forint</option>
-<option value="GBP">Pound Sterling</option>
-<option value="CHF">Swiss Franc</option>
+    <option value="recently-published" selected>-</option>
+    <option value="BGN">Bulgarian lev</option>
+<option value="HRK">Croatian kuna</option>
+<option value="CZK">Czech koruna</option>
+<option value="DKK">Danish krone</option>
+<option value="EUR" selected>Euro</option>
+<option value="HUF">Hungarian forint</option>
+<option value="ISK">Icelandic krona</option>
+<option value="NOK">Norwegian krone</option>
+<option value="PLN">Polish zloty</option>
+<option value="RON">Romanian leu</option>
+<option value="CHF">Swiss franc</option>
+<option value="SEK">Swedish krona</option>
 
   </select>
 </div>
@@ -109,7 +110,7 @@
 <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-full">
                 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Search
+                  View
                 </button>
               </div>
               </div>
@@ -130,7 +131,7 @@
 
        
 
-                        <p class="nhsuk-u-margin-bottom-2 nhsuk-body-s">Searched by: <strong class="nhsuk-tag nhsuk-tag--aqua-green">Euro</strong>
+                        <p class="nhsuk-u-margin-bottom-2 nhsuk-body-s">Viewing: <strong class="nhsuk-tag nhsuk-tag--aqua-green">Euro</strong>
                           
                         </p>
 
@@ -189,13 +190,13 @@
                                                     <div class="nhsuk-radios__item">
                                                         <input class="nhsuk-radios__input" id="sort-by-first-name" name="sort-by" type="radio" value="first-name">
                                                         <label class="nhsuk-label nhsuk-radios__label" for="sort-by-first-name">
-                                                           Effective date
+                                                           Start date
                                                         </label>
                                                     </div>
                                                     <div class="nhsuk-radios__item">
                                                         <input class="nhsuk-radios__input" id="sort-by-last-name" name="sort-by" type="radio" value="last-name" checked="checked">
                                                         <label class="nhsuk-label nhsuk-radios__label" for="sort-by-last-name">
-                                                            Expiration date
+                                                            End date
                                                         </label>
                                                     </div>
                                                     
@@ -253,8 +254,8 @@
                         <thead class="nhsuk-table__head">
                             <tr class="nhsuk-table__row">
                               <th class="nhsuk-table__header" aria-sort="none" scope="col">Exchange rate</th>
-                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Effective date</th>
-                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Expiration date</th>
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">Start date</th>
+                                <th class="nhsuk-table__header" aria-sort="none" scope="col">End date</th>
                             
                         </thead>
                         <tbody class="nhsuk-table__body nhsuk-body-">
@@ -266,8 +267,8 @@
                             </tr>
                             <tr class="nhsuk-table__row">
                               <td class="nhsuk-table__cell">1.32716</td>
-                                <td class="nhsuk-table__cell">1 April 2026</td>
-                                <td class="nhsuk-table__cell">31 July 2026</td>
+                                <td class="nhsuk-table__cell">1 Apr 2026</td>
+                                <td class="nhsuk-table__cell">31 Jul 2026</td>
                              
                             </tr>
                             <tr class="nhsuk-table__row">
