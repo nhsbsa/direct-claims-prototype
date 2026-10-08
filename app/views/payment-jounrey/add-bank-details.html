@@ -53,17 +53,10 @@
 
    
     <h1 class="nhsuk-heading-xl">
-           Add the person's bank details
+           Add bank details
         </h1>
 
        
-
-<div class="nhsuk-form-group">
-  <label class="nhsuk-label" for="input-width-10">
-    Name on the account
-  </label>
-  <input class="nhsuk-input nhsuk-input--width-20" 20="input-width-20" name="inputWidth20" type="text">
-</div>
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-10">
@@ -74,8 +67,18 @@
 
 <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="input-width-10">
+    Name on the account
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" 20="input-width-20" name="inputWidth20" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="input-width-10">
     Sort code
   </label>
+  <div class="nhsuk-hint" id="appointment-date-hint">
+      Must be 6 digits long
+    </div>
   <input class="nhsuk-input nhsuk-input--width-5" 5="input-width-5" name="inputWidth5" type="text">
 </div>
 
@@ -83,6 +86,9 @@
   <label class="nhsuk-label" for="input-width-10">
    Account number
   </label>
+  <div class="nhsuk-hint" id="appointment-date-hint">
+      Must be between 6 and 8 digits long
+    </div>
   <input class="nhsuk-input nhsuk-input--width-20" 20="input-width-20" name="inputWidth20" type="text">
 </div>
 
@@ -94,7 +100,7 @@
 
 
 <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Save and continue
+            Continue
           </button>
 </form>
 
