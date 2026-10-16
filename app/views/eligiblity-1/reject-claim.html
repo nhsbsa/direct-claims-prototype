@@ -1,0 +1,119 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NHS Design System Layout</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nhsuk-frontend@latest/dist/nhsuk.min.css">
+  
+   <div class="nhsuk-phase-banner">
+  <p class="nhsuk-phase-banner__content">
+    <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="nhsuk-phase-banner__text">
+      This is a new service undergoing testing
+    </span>
+  </p>
+</div>
+
+ <a href="search-person.html" class="govuk-back-link">Back</a>
+
+  <main class="nhsuk-main-wrapper" id="maincontent">
+
+    <form action="check-your-answers.html" method="post" novalidate>
+
+    <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        
+
+        <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"></legend>
+  <h1 class="nhsuk-heading-xl">
+            Why are you rejecting the claim?
+        </h1>
+  </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      Select all options that apply
+    </div>
+    <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="example" name="example" type="checkbox" value="email">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="example">
+          Country is not covered
+        </label>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+          Treatment was on a cruise ship
+        </label>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          Treatment was within the dates of a registered S1
+        </label>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          Another reason
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example-right-size">
+    Add a comment (optional)
+  </label>
+  <div class="nhsuk-hint" id="example-hint">
+    This will be displayed in the History section. You can enter up to 500 characters.
+  </div>
+  
+  <textarea class="nhsuk-textarea" id="example-right-size" name="exampleRightSize" rows="3" aria-describedby="example-right-size-hint"></textarea>
+</div>
+
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+</form>
+
+        </div>
+
+
+        </div>
+        </main>
+
+        {% endblock %}
