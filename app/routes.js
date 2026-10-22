@@ -137,5 +137,20 @@ router.post('/switzerland-2', function (req, res) {
     res.redirect('app/views/login-search/new-person/add-travel-dates.html')
   }
 })
+
+router.post('/eligibility-check', function (req, res) {
+  // Get the answer from the form data
+  const claimDecision = req.session.data['claimDecision']
+
+  // Check the answer and branch the user
+  if (claimDecision === 'accept') {
+    res.redirect('app/views/eligiblity-1/accept-claim.html')
+  } else if (claimDecision === 'reject') {
+    res.redirect('app/views/eligiblity-1/reject-claim.html')
+  } else if (claimDecision === 'request') {
+    res.redirect('app/views/eligiblity-1/request-more-information.html')
+  }
+  
+})
 module.exports = router
 
