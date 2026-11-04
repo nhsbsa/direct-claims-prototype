@@ -152,5 +152,20 @@ router.post('/eligibility-check', function (req, res) {
   }
   
 })
+
+router.post('/claim-proceed', function (req, res) {
+  // Get the answer from the form data
+  const claimProceed = req.session.data['claimProceed']
+
+  // Check the answer and branch the user
+  if (claimProceed === 'yes') {
+    res.redirect('app/views/login-search/claim-creation/add-nationality.html')
+  } else if (claimProceed === 'no') {
+    res.redirect('app/views/login-search/claim-creation/claim-reject-check-answers.html')
+  } else if (claimProceed=== 'request') {
+    res.redirect('app/views/login-search/claim-creation/add-nationality.html')
+  }
+  
+})
 module.exports = router
 
