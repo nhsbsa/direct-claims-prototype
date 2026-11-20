@@ -13,11 +13,11 @@ router.post('/switzerland-refund-1', function (req, res) {
   } else if (location === 'irish') {
     res.redirect('/app/views/login-search/claim-creation/add-travel-dates.html')
   } else if (location === 'other') {
-    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+    res.redirect('/app/views/login-search/claim-creation/family-member.html')
   } else if (location === 'dual') {
-    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+    res.redirect('/app/views/login-search/claim-creation/family-member.html')
    } else if (location === 'stateless') {
-    res.redirect('/app/views/login-search/claim-creation/switzerland.html')
+    res.redirect('/app/views/login-search/claim-creation/family-member.html')
   
     
   } else {
@@ -26,17 +26,17 @@ router.post('/switzerland-refund-1', function (req, res) {
   }
 })
 
-router.post('/switzerland-refund', function (req, res) {
+//router.post('/switzerland-refund', function (req, res) {
   // Get the answer from the form data
-  const inSwitzerland = req.session.data['inSwitzerland']
+ // const inSwitzerland = req.session.data['inSwitzerland']
 
   // Check the answer and branch the user
-  if (inSwitzerland === 'yes') {
-    res.redirect('/app/views/login-search/claim-creation/family-member.html')
-  } else {
-    res.redirect('app/views/login-search/claim-creation/add-travel-dates.html')
-  }
-})
+ // if (inSwitzerland === 'yes') {
+  //  res.redirect('/app/views/login-search/claim-creation/family-member.html')
+////  } else {
+//    res.redirect('app/views/login-search/claim-creation/add-travel-dates.html')
+ // }
+//})
 
 router.post('/ohs-answer', function (req, res) {
   // Get the answer from the form data
@@ -159,11 +159,11 @@ router.post('/claim-proceed', function (req, res) {
 
   // Check the answer and branch the user
   if (claimProceed === 'yes') {
-    res.redirect('app/views/login-search/claim-creation/add-nationality.html')
+    res.redirect('app/views/login-search/claim-creation/add-country-v2.html')
   } else if (claimProceed === 'no') {
     res.redirect('app/views/login-search/claim-creation/claim-reject-check-answers.html')
   } else if (claimProceed=== 'request') {
-    res.redirect('app/views/login-search/claim-creation/add-nationality.html')
+    res.redirect('app/views/login-search/claim-creation/add-country-v2.html')
   }
   
 })
